@@ -29,7 +29,7 @@ const RegistrationPage = () => {
   };
   const emailChangeHandler = (event:React.ChangeEvent<HTMLInputElement>) => {
     const enteredEmail = event.target.value;
-    console.log(enteredEmail);
+   
     dispatch(
       homepageActions.addRegisterUserData({
         ...registeredUserData,
@@ -40,7 +40,7 @@ const RegistrationPage = () => {
 
   const passwordChangeHandler = (event:React.ChangeEvent<HTMLInputElement>) => {
     const enteredPassword = event.target.value;
-    console.log(enteredPassword);
+    
     dispatch(
       homepageActions.addRegisterUserData({
         ...registeredUserData,
@@ -49,7 +49,7 @@ const RegistrationPage = () => {
     );
   };
 
-  console.log(registeredUserData);
+  
 
   return (
     <Layout>

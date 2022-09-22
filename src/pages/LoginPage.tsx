@@ -40,7 +40,7 @@ const LoginPage = () => {
 
   const emailChangeHandler = (event:React.ChangeEvent<HTMLInputElement>) => {
     const enteredEmail = event.target.value;
-    console.log(enteredEmail);
+   
     dispatch(
       homepageActions.addLoginUserData({
         ...loginUserData,
@@ -51,7 +51,7 @@ const LoginPage = () => {
 
   const passwordChangeHandler = (event:React.ChangeEvent<HTMLInputElement>) => {
     const enteredPassword = event.target.value;
-    console.log(enteredPassword);
+   
     dispatch(
       homepageActions.addLoginUserData({
         ...loginUserData,
@@ -60,7 +60,7 @@ const LoginPage = () => {
     );
   };
 
-  console.log(loginUserData);
+  
 
   return (
     <Layout>

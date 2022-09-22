@@ -1,10 +1,10 @@
-import React from "react";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { NavLink } from 'react-router-dom';
 
 const NavigationBar = () => {
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem('token');
   return (
     <>
       <Navbar bg="dark" variant="dark">
@@ -17,10 +17,7 @@ const NavigationBar = () => {
 
             {token ? (
               <Nav.Link>
-                <NavLink
-                  to="/"
-                  onClick={() => localStorage.removeItem("token")}
-                >
+                <NavLink to="/" onClick={() => localStorage.removeItem('token')}>
                   Logout
                 </NavLink>
               </Nav.Link>

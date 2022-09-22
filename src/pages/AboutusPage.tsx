@@ -29,13 +29,13 @@ function AboutusPage() {
   const locationInputRef = useRef<HTMLInputElement>(null);
 
   const addMarker = async() => {
-    console.log(locationInputRef.current?.value);
+   
     // eslint-disable-next-line no-undef
     const geocoder = new google.maps.Geocoder();
     const result = await geocoder.geocode({
       address: locationInputRef.current?.value
     });
-    console.log(result.results[0].geometry.location.lat(), result.results[0].geometry.location.lng());
+    
     setPosition({
       lat:result.results[0].geometry.location.lat(),
       lng:result.results[0].geometry.location.lng()
@@ -56,7 +56,6 @@ function AboutusPage() {
   }
 
   const locationHandler = (e: any) => {
-    console.log("Lat:", e.latLng.lat(), "Lng:", e.latLng.lng());
     setPosition({ lat: e.latLng.lat(), lng: e.latLng.lng() });
   };
 
